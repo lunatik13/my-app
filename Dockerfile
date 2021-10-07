@@ -1,6 +1,7 @@
 FROM adoptopenjdk/openjdk11:jdk-11.0.5_10-alpine as builder
 WORKDIR /app
 COPY . . 
+RUN ./mvn -N io.takari:maven:wrapper
 RUN ./mvnw package
 
 
