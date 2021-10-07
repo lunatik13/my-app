@@ -1,4 +1,4 @@
-FROM doptopenjdk/openjdk11:ppc64le-debianslim-jdk-11.0.12_7-slim as builder
+FROM doptopenjdk/openjdk11 as builder
 WORKDIR /app
 COPY . . 
 RUN ./mvnw package
